@@ -1,0 +1,11 @@
+services:
+  sender_desa1:
+    image: hajuenter/sender_opensid:latest
+    env_file: [.env.desa1]
+    environment: { TZ: Asia/Jakarta }
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    networks: [wh_shared]
+
+networks:
+  wh_shared:
+    external: true
