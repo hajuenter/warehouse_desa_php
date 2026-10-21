@@ -1,0 +1,19 @@
+services:
+  receiver:
+    image: hajuenter/receiver_only:latest
+    container_name: receiver
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Jakarta
+    networks:
+      - wh_shared
+
+networks:
+  wh_shared:
+    external: true
