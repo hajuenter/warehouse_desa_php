@@ -39,6 +39,7 @@ set_exception_handler(function (Throwable $e) {
 
 $router = new Router();
 
+require __DIR__ . '/../routes/health.php';
 require __DIR__ . '/../routes/auth.php';
 require __DIR__ . '/../routes/webhook.php';
 require __DIR__ . '/../routes/logs.php';
