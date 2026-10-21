@@ -1,0 +1,15 @@
+services:
+  monitoring_web:
+    image: hajuenter/monitoring_web:latest
+    container_name: monitoring_web
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8090:80"
+    networks:
+      - wh_shared
+
+networks:
+  wh_shared:
+    external: true
