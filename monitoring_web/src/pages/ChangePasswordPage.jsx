@@ -6,8 +6,7 @@ import { changePassword } from "../services/authService";
 import { fetchLogs } from "../services/logService";
 import { Eye, EyeOff } from "lucide-react";
 import toast from "react-hot-toast";
-
-const POLL_INTERVAL = Number(import.meta.env.VITE_POLL_INTERVAL) || 5000;
+import { POLL_INTERVAL } from "../utils/config";
 
 function ChangePasswordPage() {
   const [oldPassword, setOldPassword] = useState("");
