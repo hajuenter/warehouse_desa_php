@@ -3,3 +3,5 @@ tests
 .phpunit.result.cache
 vendor/
 node_modules
+data/
+data/admin.json
