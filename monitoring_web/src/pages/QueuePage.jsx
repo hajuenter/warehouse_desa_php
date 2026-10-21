@@ -7,9 +7,9 @@ import DesaGrid from "../components/DesaGrid";
 import QueueDetailView from "../components/QueueDetailView";
 
 import { fetchQueueSummary, fetchQueue } from "../services/queueService";
+import { POLL_INTERVAL } from "../utils/config";
 
 const LIMIT = 10;
-const POLL_INTERVAL = Number(import.meta.env.VITE_POLL_INTERVAL) || 5000;
 
 function QueuePage() {
   const [desaList, setDesaList] = useState([]);
