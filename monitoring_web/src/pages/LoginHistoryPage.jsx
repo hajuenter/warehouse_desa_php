@@ -7,10 +7,10 @@ import LoginHistoryTable from "../components/LoginHistoryTable";
 import Pagination from "../components/Pagination";
 
 import { fetchLogs } from "../services/logService";
+import { POLL_INTERVAL } from "../utils/config";
 
 const LIMIT = 10;
 const TABLE_NAME = "user";
-const POLL_INTERVAL = Number(import.meta.env.VITE_POLL_INTERVAL) || 5000;
 
 function LoginHistoryPage() {
   const [offset, setOffset] = useState(0);
