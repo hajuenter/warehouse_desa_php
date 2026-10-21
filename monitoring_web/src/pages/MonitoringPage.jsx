@@ -11,10 +11,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { fetchLogs } from "../services/logService";
 import { fetchDesaList } from "../services/metaService";
+import { POLL_INTERVAL } from "../utils/config";
 
 const LIMIT = 10;
 const STATS_LIMIT = 1000;
-const POLL_INTERVAL = Number(import.meta.env.VITE_POLL_INTERVAL) || 5000;
 
 function MonitoringPage() {
   const location = useLocation();
